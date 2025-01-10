@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvk7i0y4v8uq6"]
+
+[ext_resource type="Script" uid="uid://gyyflht7fr60" path="res://game.gd" id="1_80nbo"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_feb5d"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_80nbo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 252)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_feb5d")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Players" type="Node" parent="."]

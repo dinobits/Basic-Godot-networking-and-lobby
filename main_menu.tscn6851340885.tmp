@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvmf0645n860x"]
+
+[ext_resource type="PackedScene" uid="uid://dy7yoqtfdehat" path="res://network_menu.tscn" id="1_06t4h"]
+[ext_resource type="PackedScene" uid="uid://du47rcsbsmspl" path="res://lobby_info.tscn" id="2_7vrkn"]
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="LobbyInfo" parent="." instance=ExtResource("2_7vrkn")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -297.0
+offset_right = 0.0
+grow_horizontal = 0
+
+[node name="NetworkMenu" parent="." instance=ExtResource("1_06t4h")]
