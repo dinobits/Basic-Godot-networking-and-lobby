@@ -33,8 +33,6 @@ func _on_host_pressed() -> void:
 
 func _on_join_pressed() -> void:
 	_lobby.join_game()
-	#var game = GAME.instantiate()
-	#get_tree().root.add_child(game)
 
 
 func _on_player_joined(_id: int, _player_info) -> void:

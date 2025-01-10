@@ -1,11 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvk7i0y4v8uq6"]
+[gd_scene load_steps=4 format=3 uid="uid://bvk7i0y4v8uq6"]
 
 [ext_resource type="Script" uid="uid://gyyflht7fr60" path="res://game.gd" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://qrvkhtj42o22" path="res://player_info.tscn" id="2_e2o6t"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_feb5d"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_80nbo")
+
+[node name="PlayerInfo" parent="." instance=ExtResource("2_e2o6t")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = -567.0
+offset_top = -306.0
+offset_right = -417.0
+offset_bottom = -283.0
+grow_horizontal = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 252)
@@ -14,5 +25,9 @@ position = Vector2(0, 252)
 shape = SubResource("WorldBoundaryShape2D_feb5d")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://ble4xbcjq6v0d")
+spawn_path = NodePath("../Players")
 
 [node name="Players" type="Node" parent="."]
